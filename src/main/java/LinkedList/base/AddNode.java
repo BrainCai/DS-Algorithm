@@ -12,7 +12,7 @@ import LinkedList.ListNode;
 /**
  * 在已存在链表添加结点
  *
- * @author caiqiang
+ * @author BrianCai
  * @version 2017年12月26日
  * @see AddNode
  * @since
