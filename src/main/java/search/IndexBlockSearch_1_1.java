@@ -8,8 +8,8 @@ import org.junit.Test;
 
 
 /**
- * 分块查找
- *
+ * 分块查找 1.默认块内无须，但是分块有序 2.内部类，可以进一步优化，包含索引表的开始和结束，使其在块内查找。
+ * 
  * @author BrianCai
  * @version 2018年1月24日
  * @see IndexBlock
@@ -54,9 +54,24 @@ public class IndexBlockSearch_1_1 {
         if (array.length <= 0) {
             return false;
         }
-
+        // 获取所有索引表信息
         getAllIndexMaxKey(array, indexList);
+        // 查找
+        searchTarget(array, searchVal, indexList);
 
+        return searchTarget(array, searchVal, indexList);
+    }
+
+    /**
+     * Description:查找目标元素
+     * 
+     * @param array
+     * @param searchVal
+     * @param indexList
+     * @return boolean
+     * @see
+     */
+    private boolean searchTarget(int[] array, int searchVal, List<IndexTable> indexList) {
         for (IndexTable indexTable : indexList) {
             if (searchVal > indexTable.maxkey) {
                 continue;
@@ -74,7 +89,6 @@ public class IndexBlockSearch_1_1 {
                 }
             }
         }
-
         return false;
     }
 
@@ -88,7 +102,7 @@ public class IndexBlockSearch_1_1 {
 
         // 每块包含n个元素
 
-        bulidBlockIndexMaxKey(array, blockSize, indexList);
+        bulidBlockIndexMaxKey(array, indexList);
         printIndexTable(indexList);
     }
 
@@ -101,8 +115,7 @@ public class IndexBlockSearch_1_1 {
      * @return List<IndexTable>
      * @see
      */
-    private List<IndexTable> bulidBlockIndexMaxKey(int[] array, int blockSize,
-                                                   List<IndexTable> indexList) {
+    private void bulidBlockIndexMaxKey(int[] array, List<IndexTable> indexList) {
 
         int length = array.length;
 
@@ -122,7 +135,6 @@ public class IndexBlockSearch_1_1 {
             indexList.add(indexTable);
         }
 
-        return null;
     }
 
     /**
