@@ -12,14 +12,14 @@ import org.junit.Test;
  *
  * @author caiqiang
  * @version 2018年1月25日
- * @see ArrayImpStack
+ * @see ListImpStack
  * @since
  */
-public class ArrayImpStack {
+public class ListImpStack {
 
     static List<Integer> array = new ArrayList<>();
 
-    public ArrayImpStack() {
+    public ListImpStack() {
 
     }
 
@@ -42,7 +42,7 @@ public class ArrayImpStack {
 
     }
 
-    private void printList(ArrayImpStack stack) {
+    private void printList(ListImpStack stack) {
         System.out.println("***********************查看栈中元素********************");
         if (array.size() <= 0) {
             System.out.print("当前栈为空");
@@ -55,7 +55,7 @@ public class ArrayImpStack {
 
     @Test
     public void test() {
-        ArrayImpStack stack = new ArrayImpStack();
+        ListImpStack stack = new ListImpStack();
         printList(stack);
         stack.push(3);
         printList(stack);
@@ -65,7 +65,7 @@ public class ArrayImpStack {
 
     @Test
     public void test1() {
-        ArrayImpStack stack = new ArrayImpStack();
+        ListImpStack stack = new ListImpStack();
         printList(stack);
         System.out.println("******************push 元素***************************");
         for (int i = 0; i < 10; i++ ) {
