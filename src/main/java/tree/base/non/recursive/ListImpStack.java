@@ -8,46 +8,69 @@ import org.junit.Test;
 
 
 /**
- * 基于数组实现栈 栈最大的特点是： 在实现数据的存取时的特点，先进后出。 主要实现push,pop方法
+ * 基于ArrayList实现栈 栈最大的特点是： 在实现数据的存取时的特点，先进后出。 主要实现push,pop方法
  *
- * @author caiqiang
+ * @author BrianCai
  * @version 2018年1月25日
  * @see ListImpStack
  * @since
  */
 public class ListImpStack {
 
-    static List<Integer> array = new ArrayList<>();
+    /**
+     * 维护存放数据的容器
+     */
+    static List<Integer> list = new ArrayList<>();
 
     public ListImpStack() {
 
     }
 
+    /**
+     * Description: push方法
+     * 
+     * @param e
+     *            void
+     * @see
+     */
     public void push(Integer e) {
         System.out.println("push ..." + e);
-        array.add(e);
+        list.add(e);
     }
 
+    /**
+     * Description:pop方法
+     * 
+     * @return Integer
+     * @see
+     */
     public Integer pop() {
-        int length = array.size();
+        int length = list.size();
 
         if (length <= 0) {
             return null;
         }
 
-        int target = array.get(length - 1);
+        int target = list.get(length - 1);
         System.out.println("pop ... " + target);
-        array.set(length - 1, null);
+        list.set(length - 1, null);
         return target;
 
     }
 
+    /**
+     * Description: 打印栈中元素
+     * 
+     * @param stack
+     *            void
+     * @see
+     */
     private void printList(ListImpStack stack) {
         System.out.println("***********************查看栈中元素********************");
-        if (array.size() <= 0) {
+        if (list.size() <= 0) {
             System.out.print("当前栈为空");
         }
-        for (Integer integer : array) {
+        for (Integer integer : list) {
             System.out.print(integer + " ");
         }
         System.out.println("");
