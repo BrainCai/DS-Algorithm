@@ -1,6 +1,8 @@
 package tree.base.non.recursive;
 
 
+import java.util.Stack;
+
 import org.junit.Test;
 
 
@@ -104,4 +106,15 @@ public class ArrayImpStack {
         stack.pop();
         printArray(stack);
     }
+
+    @Test
+    public void test1() {
+        Stack<Integer> tmp = new Stack<>();
+        tmp.push(1);
+        tmp.push(2);
+        tmp.push(3);
+        for (Integer e : tmp)
+            System.out.println(e);
+    }
+
 }
