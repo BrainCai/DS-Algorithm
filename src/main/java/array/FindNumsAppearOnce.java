@@ -11,7 +11,7 @@ import org.junit.Test;
 /**
  * 一个整型数组里除了两个数字之外，其他的数字都出现了两次。请写程序找出这两个只出现一次的数字。
  *
- * @author caiqiang
+ * @author BrainCai
  * @version 2017年12月25日
  * @see FindNumsAppearOnce
  * @since
