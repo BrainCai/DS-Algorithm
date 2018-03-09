@@ -5,12 +5,12 @@ import org.junit.Test;
 import utile.PrintMessageUtil;
 
 /**
- * JavaÖĞµÄÒÆÎ»ÔËËã <br>
- * ×óÒÆÔËËã<br>
- * -------ÔÚ²»Òç³öµÄÇé¿öÏÂµÈÓÚ Ô­Êı¾İ*2^n <br>
- * ÓÒÒÆÔËËã£º<br>
- * -------Âß¼­ÔËËã--->¸ßÎ»²¹Áã£¬·ûºÅÎ»²»²ÎÓë<br>
- * -------ËãÊõÔËËã--->¸ßÎ»²¹·ûºÅÎ» Óë/»òÔËËã£º -------×¢ÒâÊÇÓÃ0²¹Î»¡£10&44
+ * Javaä¸­çš„ç§»ä½è¿ç®— <br>
+ * å·¦ç§»è¿ç®—<br>
+ * -------åœ¨ä¸æº¢å‡ºçš„æƒ…å†µä¸‹ç­‰äº åŸæ•°æ®*2^n <br>
+ * å³ç§»è¿ç®—ï¼š<br>
+ * -------é€»è¾‘è¿ç®—--->é«˜ä½è¡¥é›¶ï¼Œç¬¦å·ä½ä¸å‚ä¸<br>
+ * -------ç®—æœ¯è¿ç®—--->é«˜ä½è¡¥ç¬¦å·ä½ ä¸/æˆ–è¿ç®—ï¼š -------æ³¨æ„æ˜¯ç”¨0è¡¥ä½ã€‚10&44
  * 
  * @author BrianCai
  *
@@ -18,34 +18,34 @@ import utile.PrintMessageUtil;
 public class ShiftOperators {
 
 	/**
-	 * ×óÒÆÔËËã
+	 * å·¦ç§»è¿ç®—
 	 */
 	public void leftShiftOperator(int n, int bitmask) {
 		if (n < Integer.MAX_VALUE) {
-			PrintMessageUtil.printMesssageWithNewLines(n + " ×óÒÆ   " + bitmask + "  Î»==" + (n << bitmask));
+			PrintMessageUtil.printMesssageWithNewLines(n + " å·¦ç§»   " + bitmask + "  ä½==" + (n << bitmask));
 		}
 	}
 
 	/**
-	 * ËãÊõÓÒÒÆËã·¨---¸ßÎ»²¹·ûºÅÎ»
+	 * ç®—æœ¯å³ç§»ç®—æ³•---é«˜ä½è¡¥ç¬¦å·ä½
 	 */
 	public void rightShiftOperator(int num, int bitmask) {
 		if (num < Integer.MAX_VALUE) {
-			PrintMessageUtil.printMesssageWithNewLines(num + " ËãÊõÓÒÒÆ " + bitmask + " Î»==" + (num >> bitmask));
+			PrintMessageUtil.printMesssageWithNewLines(num + " ç®—æœ¯å³ç§» " + bitmask + " ä½==" + (num >> bitmask));
 		}
 	}
 
 	/**
-	 * ÎŞ·ûºÅµÄÓÒÒÆËã·¨---Âß¼­ÓÒÒÆ,¸ßÎ»²¹Áã
+	 * æ— ç¬¦å·çš„å³ç§»ç®—æ³•---é€»è¾‘å³ç§»,é«˜ä½è¡¥é›¶
 	 */
 	public void unsignedRightShiftOperator(int num, int bitmask) {
 		if (num < Integer.MAX_VALUE) {
-			PrintMessageUtil.printMesssageWithNewLines(num + " Âß¼­ÓÒÒÆ " + bitmask + " Î»==" + (num >>> bitmask));
+			PrintMessageUtil.printMesssageWithNewLines(num + " é€»è¾‘å³ç§» " + bitmask + " ä½==" + (num >>> bitmask));
 		}
 	}
 
 	/**
-	 * Âß¼­Óë²Ù×÷
+	 * é€»è¾‘ä¸æ“ä½œ
 	 * 
 	 * @param num1
 	 * @param num2
@@ -54,11 +54,11 @@ public class ShiftOperators {
 		if (num1 > Integer.MAX_VALUE || num2 > Integer.MAX_VALUE) {
 			return;
 		}
-		PrintMessageUtil.printMesssageWithNewLines(num1 + "/" + num2 + " Âß¼­ÓëµÄ½á¹û== " + (num1 & num2));
+		PrintMessageUtil.printMesssageWithNewLines(num1 + "/" + num2 + " é€»è¾‘ä¸çš„ç»“æœ== " + (num1 & num2));
 	}
 
 	/**
-	 * Âß¼­»ò²Ù×÷
+	 * é€»è¾‘æˆ–æ“ä½œ
 	 * 
 	 * @param num1
 	 * @param num2
@@ -67,19 +67,19 @@ public class ShiftOperators {
 		if (num1 > Integer.MAX_VALUE || num2 > Integer.MAX_VALUE) {
 			return;
 		}
-		PrintMessageUtil.printMesssageWithNewLines(num1 + "/" + num2 + " Âß¼­»òµÄ½á¹û==  " + (num1 | num2));
+		PrintMessageUtil.printMesssageWithNewLines(num1 + "/" + num2 + " é€»è¾‘æˆ–çš„ç»“æœ==  " + (num1 | num2));
 
 	}
 
 	/**
-	 * È¡·´£º<br>
-	 * ×¢Òâ·ûºÅÎ»Ò²²ÎÓëÔËËã£¬ÕıÊı¸ºÊı¶¼»á¼ÓÈë·ûºÅÎ»µÄÔËËã
+	 * å–åï¼š<br>
+	 * æ³¨æ„ç¬¦å·ä½ä¹Ÿå‚ä¸è¿ç®—ï¼Œæ­£æ•°è´Ÿæ•°éƒ½ä¼šåŠ å…¥ç¬¦å·ä½çš„è¿ç®—
 	 * 
 	 * @param num
 	 */
 	public void inverts(int num) {
 		if (num <= Integer.MAX_VALUE) {
-			PrintMessageUtil.printMesssageWithNewLines(num + " È¡·´~== " + (~num));
+			PrintMessageUtil.printMesssageWithNewLines(num + " å–å~== " + (~num));
 		}
 	}
 
@@ -87,17 +87,17 @@ public class ShiftOperators {
 		if (num1 > Integer.MAX_VALUE || num2 > Integer.MAX_VALUE) {
 			return;
 		}
-		PrintMessageUtil.printMesssageWithNewLines(num1 + "/" + num2 + "  Òì»ò²Ù×÷ ^  " + (num1 ^ num2));
+		PrintMessageUtil.printMesssageWithNewLines(num1 + "/" + num2 + "  å¼‚æˆ–æ“ä½œ ^  " + (num1 ^ num2));
 	}
 
 	@Test
 	public void test() {
-		leftShiftOperator(8, 2);// ×óÒÆ²Ù×÷
-		rightShiftOperator(-127, 2);// ËãÊõÓÒÒÆ
-		unsignedRightShiftOperator(-127, 2);// Âß¼­ÓÒÒÆ
-		andOperator(10, 44);// Óë²Ù×÷
-		orOperator(10, 44);// »ò²Ù×÷
-		inverts(1);// È¡·´²Ù×÷
-		exclusiveOr(10, 44);// Òì»ò²Ù×÷
+		leftShiftOperator(8, 2);// å·¦ç§»æ“ä½œ
+		rightShiftOperator(-127, 2);// ç®—æœ¯å³ç§»
+		unsignedRightShiftOperator(-127, 2);// é€»è¾‘å³ç§»
+		andOperator(10, 44);// ä¸æ“ä½œ
+		orOperator(10, 44);// æˆ–æ“ä½œ
+		inverts(1);// å–åæ“ä½œ
+		exclusiveOr(10, 44);// å¼‚æˆ–æ“ä½œ
 	}
 }
