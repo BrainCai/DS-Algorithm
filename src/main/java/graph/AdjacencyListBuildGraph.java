@@ -20,7 +20,7 @@ public class AdjacencyListBuildGraph {
 	 * @param graph
 	 *            生成的图
 	 */
-	public void initialGraph(Graph graph) {
+	public void initialGraph(GraphDNWithAdjList graph) {
 
 		// 输入点数和边数
 		inputVexNumAndEdgeNum(graph);
@@ -37,7 +37,7 @@ public class AdjacencyListBuildGraph {
 	 * 
 	 * @param graph
 	 */
-	private void outputGraphNode(Graph graph) {
+	private void outputGraphNode(GraphDNWithAdjList graph) {
 		printMessage("打印图邻接表");
 		for (int i = 0; i < graph.verNum; i++) {
 			// 获取了顶点
@@ -58,7 +58,7 @@ public class AdjacencyListBuildGraph {
 	 * 
 	 * @param graph
 	 */
-	private void inputEdgeInVex(Graph graph) {
+	private void inputEdgeInVex(GraphDNWithAdjList graph) {
 		printMessage("输入顶点表示的边：");
 		for (int i = 0; i < graph.edgeNum; i++) {
 			String preName = inputTool.next();
@@ -77,7 +77,7 @@ public class AdjacencyListBuildGraph {
 	 * @param preNode
 	 * @param floNode
 	 */
-	private void bulidNodeList(Graph graph, Vertex1 preNode, Vertex1 floNode) {
+	private void bulidNodeList(GraphDNWithAdjList graph, Vertex1 preNode, Vertex1 floNode) {
 		for (int i = 0; i < graph.verNum; i++) {
 			if (preNode.verName.equals(graph.vertexArray[i].verName)) {
 				// 此处需要创建新的结点
@@ -111,7 +111,7 @@ public class AdjacencyListBuildGraph {
 	 * @param pre
 	 * @return
 	 */
-	private Vertex1 getVertex(Graph graph, String pre) {
+	private Vertex1 getVertex(GraphDNWithAdjList graph, String pre) {
 		for (int i = 0; i < graph.verNum; i++) {
 			if (graph.vertexArray[i].verName.equals(pre)) {
 				return graph.vertexArray[i];
@@ -124,7 +124,7 @@ public class AdjacencyListBuildGraph {
 	 * 
 	 * @param graph
 	 */
-	private void inputVexNam(Graph graph) {
+	private void inputVexNam(GraphDNWithAdjList graph) {
 		printMessage("输入顶点的名称：");
 		for (int i = 0; i < graph.verNum; i++) {
 			Vertex1 vertex1 = new Vertex1();
@@ -137,7 +137,7 @@ public class AdjacencyListBuildGraph {
 	 * 
 	 * @param graph
 	 */
-	private void inputVexNumAndEdgeNum(Graph graph) {
+	private void inputVexNumAndEdgeNum(GraphDNWithAdjList graph) {
 		printMessage("输入顶点数和边数：");
 		graph.verNum = inputTool.nextInt();
 		graph.edgeNum = inputTool.nextInt();
@@ -161,7 +161,7 @@ public class AdjacencyListBuildGraph {
 
 	@Test
 	public void test() {
-		Graph graph = new Graph();
+		GraphDNWithAdjList graph = new GraphDNWithAdjList();
 		initialGraph(graph);
 		outputGraphNode(graph);
 	}
@@ -172,7 +172,8 @@ public class AdjacencyListBuildGraph {
 	 * @author BrianCai
 	 *
 	 */
-	class Graph {
+
+	class GraphDNWithAdjList {
 		Vertex1[] vertexArray = new Vertex1[100];// 存放顶点的数组
 		int verNum = 0;// 顶点的总数
 		int edgeNum = 0;// 边数
