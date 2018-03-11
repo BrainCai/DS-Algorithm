@@ -59,7 +59,7 @@ public class AdjacencyMartixBuildGraph {
 	 */
 	private void initVertexNumAndAdjMartix(GraphDNWithAdjMatrix graph) {
 
-		PrintMessageUtil.printMesssageWithNewLines("请输入顶点的个数 :)");
+		PrintMessageUtil.printMsgWithNewLine("请输入顶点的个数 :)");
 		int vertexNum = getVertexNum();
 		graph.verNum = vertexNum;
 		graph.vertexArray = new int[vertexNum][vertexNum];
@@ -68,7 +68,7 @@ public class AdjacencyMartixBuildGraph {
 	private int getVertexNum() {
 		int verNum;
 		while ((verNum = inputTool.nextInt()) <= 1) {
-			PrintMessageUtil.printMesssageWithNewLines("输入的点的个数必须大于等于1 :)");
+			PrintMessageUtil.printMsgWithNewLine("输入的点的个数必须大于等于1 :)");
 		}
 		return verNum;
 	}
@@ -79,7 +79,7 @@ public class AdjacencyMartixBuildGraph {
 	 * @param graph
 	 */
 	private void initVertexName(GraphDNWithAdjMatrix graph) {
-		PrintMessageUtil.printMesssageWithNewLines("请输入顶点的名称:)");
+		PrintMessageUtil.printMsgWithNewLine("请输入顶点的名称:)");
 		int verNum = graph.verNum;// 注意此处将顶点数拷贝为局部变量
 		graph.vertexName = new String[verNum];
 		int idx = 0;
@@ -101,11 +101,11 @@ public class AdjacencyMartixBuildGraph {
 		int edgeNumMax = 0;
 		int verNum = graph.verNum;
 		while (true) {
-			PrintMessageUtil.printMesssageWithNewLines("输入边数:)");
+			PrintMessageUtil.printMsgWithNewLine("输入边数:)");
 			edgeNum = inputTool.nextInt();
 			edgeNumMax = verNum * (verNum - 1) / 2;
 			if (edgeNum <= 0 || edgeNum > edgeNumMax) {
-				PrintMessageUtil.printMesssageWithNewLines("输入的边数必须大于 0 小于等于" + edgeNumMax + "范围内");
+				PrintMessageUtil.printMsgWithNewLine("输入的边数必须大于 0 小于等于" + edgeNumMax + "范围内");
 				continue;
 			} else {
 				graph.edgeNum = edgeNum;
@@ -120,7 +120,7 @@ public class AdjacencyMartixBuildGraph {
 	 * @param graph
 	 */
 	private void bulidAdjMatrix(GraphDNWithAdjMatrix graph) {
-		PrintMessageUtil.printMesssageWithNewLines("根据顶点输入边关系");
+		PrintMessageUtil.printMsgWithNewLine("根据顶点输入边关系");
 		for (int i = 0; i < graph.edgeNum; i++) {
 			String proVerName = inputTool.next();// 前一个顶点
 			String floVerName = inputTool.next();// 后一个顶点
@@ -143,7 +143,7 @@ public class AdjacencyMartixBuildGraph {
 				return i;
 			}
 		}
-		PrintMessageUtil.printMesssageWithNewLines("输入的顶点不在图中");
+		PrintMessageUtil.printMsgWithNewLine("输入的顶点不在图中");
 		return -1;
 	}
 
@@ -178,7 +178,7 @@ public class AdjacencyMartixBuildGraph {
 					String proVerStr = getVerName(i, graph);
 					String floVerStr = getVerName(j, graph);
 					// adjMatrix[j][i] = 0;
-					PrintMessageUtil.printMesssageWithoutNewLines(proVerStr + " - " + floVerStr + " | ");
+					PrintMessageUtil.printMsgWithoutNewLine(proVerStr + " - " + floVerStr + " | ");
 				}
 			}
 		}

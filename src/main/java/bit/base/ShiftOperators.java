@@ -22,7 +22,7 @@ public class ShiftOperators {
 	 */
 	public void leftShiftOperator(int n, int bitmask) {
 		if (n < Integer.MAX_VALUE) {
-			PrintMessageUtil.printMesssageWithNewLines(n + " 左移   " + bitmask + "  位==" + (n << bitmask));
+			PrintMessageUtil.printMsgWithNewLine(n + " 左移   " + bitmask + "  位==" + (n << bitmask));
 		}
 	}
 
@@ -31,7 +31,7 @@ public class ShiftOperators {
 	 */
 	public void rightShiftOperator(int num, int bitmask) {
 		if (num < Integer.MAX_VALUE) {
-			PrintMessageUtil.printMesssageWithNewLines(num + " 算术右移 " + bitmask + " 位==" + (num >> bitmask));
+			PrintMessageUtil.printMsgWithNewLine(num + " 算术右移 " + bitmask + " 位==" + (num >> bitmask));
 		}
 	}
 
@@ -40,7 +40,7 @@ public class ShiftOperators {
 	 */
 	public void unsignedRightShiftOperator(int num, int bitmask) {
 		if (num < Integer.MAX_VALUE) {
-			PrintMessageUtil.printMesssageWithNewLines(num + " 逻辑右移 " + bitmask + " 位==" + (num >>> bitmask));
+			PrintMessageUtil.printMsgWithNewLine(num + " 逻辑右移 " + bitmask + " 位==" + (num >>> bitmask));
 		}
 	}
 
@@ -54,7 +54,7 @@ public class ShiftOperators {
 		if (num1 > Integer.MAX_VALUE || num2 > Integer.MAX_VALUE) {
 			return;
 		}
-		PrintMessageUtil.printMesssageWithNewLines(num1 + "/" + num2 + " 逻辑与的结果== " + (num1 & num2));
+		PrintMessageUtil.printMsgWithNewLine(num1 + "/" + num2 + " 逻辑与的结果== " + (num1 & num2));
 	}
 
 	/**
@@ -67,7 +67,7 @@ public class ShiftOperators {
 		if (num1 > Integer.MAX_VALUE || num2 > Integer.MAX_VALUE) {
 			return;
 		}
-		PrintMessageUtil.printMesssageWithNewLines(num1 + "/" + num2 + " 逻辑或的结果==  " + (num1 | num2));
+		PrintMessageUtil.printMsgWithNewLine(num1 + "/" + num2 + " 逻辑或的结果==  " + (num1 | num2));
 
 	}
 
@@ -79,7 +79,7 @@ public class ShiftOperators {
 	 */
 	public void inverts(int num) {
 		if (num <= Integer.MAX_VALUE) {
-			PrintMessageUtil.printMesssageWithNewLines(num + " 取反~== " + (~num));
+			PrintMessageUtil.printMsgWithNewLine(num + " 取反~== " + (~num));
 		}
 	}
 
@@ -87,7 +87,7 @@ public class ShiftOperators {
 		if (num1 > Integer.MAX_VALUE || num2 > Integer.MAX_VALUE) {
 			return;
 		}
-		PrintMessageUtil.printMesssageWithNewLines(num1 + "/" + num2 + "  异或操作 ^  " + (num1 ^ num2));
+		PrintMessageUtil.printMsgWithNewLine(num1 + "/" + num2 + "  异或操作 ^  " + (num1 ^ num2));
 	}
 
 	@Test
