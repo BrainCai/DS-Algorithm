@@ -1,9 +1,9 @@
-package bit.apply.DelRightBitOf_1;
+package bit.apply.delrghtbitOf1;
 
 /**
- * 判断一个数是否是2的次幂.
+ * 判断�?个数是否�?2的次�?.
  * 
- * 思路： 对于2的次幂，一定只会在高位出现一个1，所以与任何比2的次幂要小的值做逻辑与运算都为0
+ * 思路�? 对于2的次幂，�?定只会在高位出现�?�?1，所以与任何�?2的次幂要小的值做逻辑与运算都�?0
  * 
  * @author Administrator
  *
