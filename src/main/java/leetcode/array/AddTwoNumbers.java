@@ -2,20 +2,6 @@ package leetcode.array;
 
 import org.junit.Test;
 
-class ListNode {
-	int val;
-	ListNode next;
-
-	ListNode(int x) {
-		val = x;
-	}
-
-	public ListNode(int val, ListNode next) {
-		this.val = val;
-		this.next = next;
-	}
-}
-
 /**
  * leetcode第二道题：<br>
  * 解题关键是：<br>
@@ -79,5 +65,19 @@ public class AddTwoNumbers {
 			System.out.println(node.val);
 			node = node.next;
 		}
+	}
+}
+
+class ListNode {
+	int val;
+	ListNode next;
+
+	ListNode(int x) {
+		val = x;
+	}
+
+	public ListNode(int val, ListNode next) {
+		this.val = val;
+		this.next = next;
 	}
 }
