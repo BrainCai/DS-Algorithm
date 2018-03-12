@@ -9,12 +9,12 @@ import java.util.List;
  * @author BrianCai
  *
  */
-public class GraphNode {
+public class GraphVertex {
 	public List<GraphEdge> edgeList = null;
 
 	private String label = "";
 
-	public GraphNode(String label) {
+	public GraphVertex(String label) {
 		this.label = label;
 		if (edgeList == null) {
 			edgeList = new ArrayList<GraphEdge>();
