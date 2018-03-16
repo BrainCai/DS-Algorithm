@@ -19,11 +19,11 @@ public class QuickSort {
 	private int singleSort(int low, int high, int[] nums) {
 		int tmp = nums[low];
 		while (low < high) {//
-			while (low < high && nums[high] >= tmp) {
+			while (low < high && nums[high] >= tmp) {// 遍历右子表找出第一个小于tmp，交换到low，否则更新high的值
 				high--;
 			}
 			nums[low] = nums[high];
-			while (low < high && nums[low] <= tmp) {
+			while (low < high && nums[low] <= tmp) {// 遍历左子表找出第一个大于tmp的值，交换high,否则就更新low的值
 				low++;
 			}
 			nums[high] = nums[low];
