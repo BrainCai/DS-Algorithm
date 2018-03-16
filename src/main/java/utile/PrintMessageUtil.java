@@ -29,16 +29,19 @@ public class PrintMessageUtil {
 		case "Integer":
 			System.out.println(String.valueOf(message));
 			break;
+		case "Boolean":
+			System.out.println(message);
+			break;
 		case "ArrayList":
 			System.out.println(JSON.toJSONString(message));
 			break;
 		}
 	}
 
-	public static void main(String[] args) {
-		int a = 0;
-		Object object = a;
-		System.out.println(object.getClass().getSimpleName());
-
+	public static void printIntArrayWithoutNewline(int[] nums) {
+		for (int j = 0; j < nums.length; j++) {
+			System.out.println(nums[j]);
+		}
 	}
+
 }
