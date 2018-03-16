@@ -3,10 +3,10 @@ package sort;
 import org.junit.Test;
 
 /**
- * ð������<br>
- * �㷨TC�½���O(n)��<br>
- * ���裺<br>
- * ������Ԫ�ػ����������ϣ���һ�����Ѿ����򣬵ڶ�����δ���򣬴ӵڶ�������ȡ��һ��Ԫ�أ�������һ�����е�Ԫ�أ��ҵ�����н���Ԫ�ء�
+ * 冒泡排序<br>
+ * 算法TC下界是O(n)的<br>
+ * 步骤：<br>
+ * 将数组元素划分两个集合，第一部分已经排序，第二部分未排序，从第二部分中取出一个元素，遍历第一部分中的元素，找到后进行交换元素。
  * 
  * @author Administrator
  *
@@ -14,11 +14,11 @@ import org.junit.Test;
 public class BubbleSort {
 
 	/**
-	 * ð������ ʵ��˼·<br>
-	 * 1�����ڼ�¼����<br>
-	 * 2��m��¼���ȣ���flag ��¼�Ƿ��ֽ�����<br>
-	 * 3��ÿ�������ʹ�����������һ���ȽϿռ䶯̬�仯<br>
-	 * 4����num[i+1]>num[i]ʱ��һ����n[i+1]~num[0]���������У�������ִ�н�����¼
+	 * 冒泡排序 实现思路<br>
+	 * 1、基于记录交换<br>
+	 * 2、m记录长度，用flag 记录是否发现交换。<br>
+	 * 3、每趟排序后，使得搜索区间减一。比较空间动态变化<br>
+	 * 4、当num[i+1]>num[i]时，一定有n[i+1]~num[0]是有序序列，不会再执行交换记录
 	 * 
 	 * @param nums
 	 * @return
@@ -35,7 +35,7 @@ public class BubbleSort {
 			// for (int i = 0; i < nums.length - 1; i++) {
 			for (int i = 0; i < m; i++) {
 				if (nums[i] > nums[i + 1]) {
-					swap(nums, i, i + 1);// ����
+					swap(nums, i, i + 1);// 交换
 					falg = true;
 				}
 			}
@@ -47,7 +47,7 @@ public class BubbleSort {
 	}
 
 	/**
-	 * ����Ԫ��
+	 * 交换元素
 	 * 
 	 * @param nums
 	 * @param i
